@@ -14,7 +14,6 @@ import com.shikhar.springboot.springmvccrud.entity.Employee;
 @Controller
 @RequestMapping("/employees")
 public class EmployeeController {
-
     private EmployeeService employeeService;
 
     public EmployeeController(EmployeeService theEmployeeService) {
@@ -28,7 +27,7 @@ public class EmployeeController {
 
         // get the employees from db
         List<Employee> theEmployees = employeeService.findAll();
-
+        System.out.println("change is made");
         // add to the spring model
         theModel.addAttribute("employees", theEmployees);
 
